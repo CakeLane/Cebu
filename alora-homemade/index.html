@@ -30,20 +30,12 @@
     </p>
   </div>
 
-  <script>
-    const TARGET_URL = 'https://script.google.com/macros/s/AKfycbx4X2l5A2k8AH4w9exg7RWWWUVjYNH9fj3zheQ0JJRk/exec';
-
-    if (TARGET_URL && !TARGET_URL.includes('AKfycbx4X2l5A2k8AH4w9exg7RWWWUVjYNH9fj3zheQ0JJRk')) {
-      const fallbackLink = document.getElementById('fallback-link');
-      fallbackLink.href = TARGET_URL;
-      document.getElementById('fallback').style.display = 'block';
-
-      try {
-        window.top.location.replace(TARGET_URL);
-      } catch (err) {
-        window.location.href = TARGET_URL;
-      }
-    }
-  </script>
+ <script>
+  const TARGET_URL = 'https://script.google.com/macros/s/AKfycbx4X2l5A2k8AH4w9exg7RWWWUVjYNH9fj3zheQ0JJRk/exec';
+  const link = document.getElementById('fallback-link');
+  link.href = TARGET_URL;
+  document.getElementById('fallback').style.display = 'block';
+  window.location.replace(TARGET_URL);
+</script>
 </body>
 </html>
